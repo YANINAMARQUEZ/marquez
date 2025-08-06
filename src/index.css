@@ -1,0 +1,14 @@
+:root {
+  --amarillo: #FFD700;
+  --dorado: #DAA520;
+  --gris: #B4B4B4;
+  --plateado: #C0C0C0;
+  --negro: #2F2F2F;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--gris);
+  color: var(--negro);
+}
