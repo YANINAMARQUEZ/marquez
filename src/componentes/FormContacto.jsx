@@ -4,7 +4,7 @@ const FormContacto = () => {
       <input type="text" placeholder="Nombre completo" required className="input" />
       <input type="email" placeholder="Correo electrónico" required className="input" />
       <textarea placeholder="Contanos tu necesidad..." required className="textarea" />
-      <button type="submit" className="btn">Enviar consulta</button>
+      <button type="submit" className="btn">Comunícate con nosotros </button>
     </form>
   );
 };
