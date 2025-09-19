@@ -4,7 +4,7 @@ import './Servicios.css';
 const servicios = [
   { nombre: 'Desarrollo Web institucional', descripcion: 'Sitios modernos, rápidos y escalables.' },
   { nombre: 'Branding visual estratégico', descripcion: 'Logos únicos, portadas impactantes, layouts profesionales.' },
-  { nombre: 'Asesoría legal y fiscal', descripcion: 'Protección de marca, facturación internacional, cobros legales.' },
+  { nombre: 'Asesoría ', descripcion: 'Protección de marca,mantenimiento , y desarrollo de software.' },
 ];
 
 export default function Servicios() {
