@@ -3,142 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Márquezlab-webpage | Branding y Web Institucional</title>
-  href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
- <style>
- :root {
-  --negro: #EAEAEA;
-  --gris: #1A1A1A;
-  --plateado: #0D0D0D;
-  --dorado: #FFD700;
-  --amarillo: #F4C430;
-}
+  <title>Márquezlab-webpage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --negro: #EAEAEA;
+      --gris: #1A1A1A;
+      --plateado: #0D0D0D;
+      --dorado: #FFD700;
+      --amarillo: #F4C430;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--plateado);
-  color: var(--negro);
-}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--plateado);
+      color: var(--negro);
+    }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--gris);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.1);
-}
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--gris);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(255, 215, 0, 0.1);
+    }
 
-.logo {
-  font-size: 1.5rem;
-  color: var(--dorado);
-  font-weight: 600;
-}
+    .logo {
+      font-size: 1.5rem;
+      color: var(--dorado);
+      font-weight: 600;
+    }
 
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
 
-.menu li a {
-  text-decoration: none;
-  color: var(--negro);
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
+    .menu li a {
+      text-decoration: none;
+      color: var(--negro);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-.menu li a:hover {
-  color: var(--amarillo);
-}
+    .menu li a:hover {
+      color: var(--amarillo);
+    }
 
-/* Hero */
-.hero {
-  background-color: var(--plateado);
-  text-align: center;
-  padding: 6rem 2rem;
-}
+    /* Hero */
+    .hero {
+      background-color: var(--plateado);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
 
-.hero h1 {
-  font-size: 3rem;
-  color: var(--dorado);
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 1rem;
-}
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--dorado);
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
 
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-}
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
 
-.hero-btn {
-  background-color: var(--dorado);
-  color: var(--plateado);
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
+    .hero-btn {
+      background-color: var(--dorado);
+      color: var(--plateado);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
-.hero-btn:hover {
-  background-color: var(--amarillo);
-}
+    .hero-btn:hover {
+      background-color: var(--amarillo);
+    }
 
-/* Servicios */
-.servicios {
-  background-color: var(--gris);
-  padding: 3rem 2rem;
-  text-align: center;
-}
+    /* Servicios */
+    .servicios {
+      background-color: var(--gris);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
 
-.servicios h2 {
-  font-size: 2rem;
-  color: var(--dorado);
-  margin-bottom: 2rem;
-}
+    .servicios h2 {
+      font-size: 2rem;
+      color: var(--dorado);
+      margin-bottom: 2rem;
+    }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
 
-.card {
-  background-color: var(--plateado);
-  padding: 1.5rem;
-  border-radius: 8px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .card {
+      background-color: var(--plateado);
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.2);
-}
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(255, 215, 0, 0.2);
+    }
 
-.card h3 {
-  color: var(--amarillo);
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
+    .card h3 {
+      color: var(--amarillo);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
 
-.card p {
-  font-size: 1rem;
-}
+    .card p {
+      font-size: 1rem;
+    }
 
-</style> 
+    /* Contacto */
+    .contacto {
+      background-color: var(--plateado);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .contacto h2 {
+      color: var(--dorado);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contacto p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    .contacto a {
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .contacto a:hover {
+      background-color: #1ebc5c;
+    }
+  </style>
 </head>
- <body>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Márquezlab</div>
+    <ul class="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h1>Tu Visión Digital, Nuestra Creación</h1>
+    <p>Expertos en Desarrollo Web & Software</p>
+    <a href="#servicios" class="hero-btn">Explora nuestros servicios</a>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <h2>Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Desarrollo Web & Apps</h3>
+        <p>Creación de sitios web modernos, responsivos y funcionales para tu marca.</p>
+      </div>
+      <div class="card">
+        <h3>Consultoría & Software</h3>
+        <p>Soluciones personalizadas y asesoramiento técnico para tu negocio digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Solicitar propuesta</h2>
+    <p>Desarrollamos sitios institucionales y branding profesional para marcas que buscan diferenciarse y escalar.</p>
+    <a href="https://wa.me/5493754530645" target="_blank">Contactar por WhatsApp</a>
+  </section>
+
+
+
     
   <!-- Navbar -->
   <nav class="navbar">
