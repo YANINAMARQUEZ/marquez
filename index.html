@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet">
   <style>
     :root {
-      --negro: #EAEAEA;
-      --gris: #1A1A1A;
-      --plateado: #0D0D0D;
+      --negro: #1A1A1A;
+      --gris: #2C2C2C;
+      --plateado: #EAEAEA;
       --dorado: #FFD700;
       --amarillo: #F4C430;
     }
@@ -19,6 +19,16 @@
       font-family: 'Montserrat', sans-serif;
       background-color: var(--plateado);
       color: var(--negro);
+    }
+
+    /* Animaciones */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Navbar */
@@ -31,13 +41,14 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(255, 215, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
     .logo {
       font-size: 1.5rem;
       color: var(--dorado);
       font-weight: 600;
+      font-family: 'Orbitron', sans-serif;
     }
 
     .menu {
@@ -48,7 +59,7 @@
 
     .menu li a {
       text-decoration: none;
-      color: var(--negro);
+      color: var(--plateado);
       font-weight: 600;
       transition: color 0.3s ease;
     }
@@ -79,7 +90,7 @@
 
     .hero-btn {
       background-color: var(--dorado);
-      color: var(--plateado);
+      color: var(--gris);
       padding: 0.8rem 1.5rem;
       border: none;
       border-radius: 4px;
@@ -92,47 +103,47 @@
       background-color: var(--amarillo);
     }
 
-    /* Servicios */
-    .servicios {
-      background-color: var(--gris);
-      padding: 3rem 2rem;
-      text-align: center;
+    /* Secciones */
+    section {
+      padding: 4rem 2rem;
     }
 
-    .servicios h2 {
+    h2 {
       font-size: 2rem;
       color: var(--dorado);
       margin-bottom: 2rem;
+      text-align: center;
     }
 
-    .cards {
+    .cards, .blocks, .social-icons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
     }
 
-    .card {
-      background-color: var(--plateado);
+    .card, .block {
+      background-color: var(--gris);
+      color: var(--plateado);
       padding: 1.5rem;
       border-radius: 8px;
       width: 280px;
-      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
+    .card:hover, .block:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(255, 215, 0, 0.2);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
-    .card h3 {
+    .card h3, .block h3 {
       color: var(--amarillo);
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
     }
 
-    .card p {
+    .card p, .block p {
       font-size: 1rem;
     }
 
@@ -140,19 +151,6 @@
     .contacto {
       background-color: var(--plateado);
       text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .contacto h2 {
-      color: var(--dorado);
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .contacto p {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      font-size: 1.1rem;
     }
 
     .contacto a {
@@ -168,32 +166,46 @@
     .contacto a:hover {
       background-color: #1ebc5c;
     }
+
+    /* Redes */
+    .redes {
+      background-color: var(--gris);
+      text-align: center;
+      color: var(--plateado);
+    }
+
+    .social-icons a svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--amarillo);
+      transition: fill 0.3s ease;
+    }
+
+    .social-icons a:hover svg {
+      fill: var(--dorado);
+    }
   </style>
 </head>
 <body>
 
-  <header class="navbar">
+  <header class="navbar fade-in">
     <div class="logo">Márquezlab-webpage</div>
     <ul class="menu">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
-
-<li><a href="https://miniweb-six.vercel.app" target="_blank" rel="noopener noreferrer">Generador de Plantillas</a></li>
-
+      <li><a href="https://miniweb-six.vercel.app" target="_blank">Generador de Plantillas</a></li>
     </ul>
-
-
-
   </header>
 
-  <section class="hero" id="inicio">
+  <section class="hero fade-in" id="inicio">
     <h1>Tu Visión Digital, Nuestra Creación</h1>
     <p>Expertos en Desarrollo Web & Software</p>
     <a href="#servicios" class="hero-btn">Explora nuestros servicios</a>
   </section>
 
-  <section class="servicios" id="servicios">
+  <section id="servicios" class="fade-in">
     <h2>Servicios</h2>
     <div class="cards">
       <div class="card">
@@ -207,91 +219,45 @@
     </div>
   </section>
 
-  <section class="contacto" id="contacto">
+  <section id="nosotros" class="fade-in">
+    <h2>Sobre Nosotros</h2>
+    <div class="blocks">
+      <div class="block">
+        <p>En <strong>MárquezLab-Webpage</strong> transformamos ideas institucionales en soluciones digitales escalables. Desarrollamos sitios web, campañas de marketing y software a medida con enfoque profesional, blindaje técnico y documentación editable.</p>
+      </div>
+      <div class="block">
+        <p>Acompañamos a marcas e instituciones que buscan diferenciarse, automatizar su atención digital y profesionalizar su presencia online. Cada proyecto está pensado para delegar, escalar y proteger.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que-elegirnos" class="fade-in">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="blocks">
+      <div class="block">
+        <h3>🔒 Blindaje institucional</h3>
+        <p>Protegemos tu reputación digital con flujos validados legal y técnicamente.</p>
+      </div>
+      <div class="block">
+        <h3>⚙️ Automatización escalable</h3>
+        <p>Soluciones replicables que optimizan atención digital e integran pagos y validaciones.</p>
+      </div>
+      <div class="block">
+        <h3>📄 Documentación editable</h3>
+        <p>Módulos con documentación institucional editable para escalar sin depender de terceros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto fade-in" id="contacto">
     <h2>Solicitar propuesta</h2>
     <p>Desarrollamos sitios institucionales y branding profesional para marcas que buscan diferenciarse y escalar.</p>
     <a href="https://wa.me/5493754530645" target="_blank">Contactar por WhatsApp</a>
   </section>
 
-<section id="sobre-nosotros" class="bg-slate-900 text-white py-20 px-6">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Texto institucional -->
-    <div class="md:w-1/2">
-      <h2 class="text-4xl font-bold mb-6">Sobre Nosotros</h2>
-      <p class="text-lg text-slate-300 leading-relaxed mb-4">
-        En <strong>MárquezLab-Webpage</strong> transformamos ideas institucionales en soluciones digitales escalables. Desarrollamos sitios web, campañas de marketing y software a medida con enfoque profesional, blindaje técnico y documentación editable.
-      </p>
-      <p class="text-lg text-slate-300 leading-relaxed">
-        Acompañamos a marcas e instituciones que buscan diferenciarse, automatizar su atención digital y profesionalizar su presencia online. Cada proyecto está pensado para delegar, escalar y proteger.
-      </p>
-    </div>
-
-    <!-- Imagen institucional -->
-    <div class="md:w-1/2 text-center">
-      <img src="https://marquez-six.vercel.app/logo.png" alt="Equipo MárquezLab-Webpage" class="rounded-xl shadow-lg max-w-full">
-    </div>
-  </div>
-</section>
-
-
-
-<section id="por-que-elegirnos" class="bg-slate-100 dark:bg-slate-900 py-20 px-6">
-  <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-4xl font-bold text-slate-800 dark:text-white mb-12">¿Por qué elegirnos?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4">🔒</div>
-        <h3 class="text-xl font-semibold text-slate-700 dark:text-slate-100 mb-2">Blindaje institucional</h3>
-        <p class="text-slate-600 dark:text-slate-300">Protegemos tu reputación digital con flujos validados legal y técnicamente.</p>
-      </div>
-      <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4">⚙️</div>
-        <h3 class="text-xl font-semibold text-slate-700 dark:text-slate-100 mb-2">Automatización escalable</h3>
-        <p class="text-slate-600 dark:text-slate-300">Soluciones replicables que optimizan atención digital e integran pagos y validaciones.</p>
-      </div>
-      <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-3xl mb-4">📄</div>
-        <h3 class="text-xl font-semibold text-slate-700 dark:text-slate-100 mb-2">Documentación editable</h3>
-        <p class="text-slate-600 dark:text-slate-300">Módulos con documentación institucional editable para escalar sin depender de terceros.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-    
-  
-  <!-- Hero -->
-  <section class="hero" id="inicio">
-    <h1>Identidad visual y legal para marcas que impactan</h1>
-    <p>Desarrollamos sitios institucionales, branding profesional para marcas que buscan diferenciarse y escalar.</p>
-    <a href="https://wa.me/5493754530645" class="hero-btn">Solicitar propuesta</a>
-
-  </section>
-
-  <!-- redes -->
-
-
-<section id="redes-sociales" class="bg-slate-900 text-white py-12 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl font-semibold mb-4">Conectá con MárquezLab</h2>
-    <p class="text-slate-400 text-base mb-6">Seguinos para conocer proyectos, novedades y soluciones digitales escalables.</p>
-    <div class="flex justify-center gap-6">
-      <a href="https://www.instagram.com/marquezlab" target="_blank" class="text-pink-500 hover:text-pink-400 transition">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm4.25 5a5 5 0 110 10 5 5 0 010-10zm5.25-.75a.75.75 0 110 1.5.75.75 0 010-1.5z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/company/marquezlab" target="_blank" class="text-blue-600 hover:text-blue-500 transition">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5.01 2.5 2.5 0 01.01-5.01zM3 9h4v12H3V9zm7 0h3.6v1.71h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-4v-5.25c0-1.25-.03-2.85-1.75-2.85-1.75 0-2.02 1.37-2.02 2.75V21h-4V9z"/></svg>
-      </a>
-      <a href="https://wa.me/5493754530645" target="_blank" class="text-green-500 hover:text-green-400 transition">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.78 11.78 0 0012 0C5.37 0 .01 5.37.01 12c0 2.11.55 4.17 1.6 5.99L0 24l6.26-1.64a11.94 11.94 0 005.74 1.46c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
+  <section class="redes fade-in">
+    <h2>Conectá con MárquezLab</h2>
+    <p>Seguinos para conocer
   
 
 
