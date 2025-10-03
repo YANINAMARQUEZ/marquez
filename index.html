@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Márquezlab-webpage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+
+<script src="//code.tidio.co/jgalu6ffdak9czrngrroaydxjyfin19p.js" async></script>
+
+  <style>
+    :root {
+      --negro: #1A1A1A;
+      --gris: #2C2C2C;
+      --plateado: #EAEAEA;
+      --dorado: #FFD700;
+      --amarillo: #F4C430;
+    }
+
+<script src="//code.tidio.co/jgalu6ffdak9czrngrroaydxjyfin19p.js" async></script>
+
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--plateado);
+      color: var(--negro);
+    }
+
+    /* Animaciones */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--gris);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: var(--dorado);
+      font-weight: 600;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: var(--plateado);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .menu li a:hover {
+      color: var(--amarillo);
+    }
+
+    /* Hero */
+    .hero {
+      background-color: var(--plateado);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--dorado);
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero-btn {
+      background-color: var(--dorado);
+      color: var(--gris);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background-color: var(--amarillo);
+    }
+
+    /* Secciones */
+    section {
+      padding: 4rem 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--dorado);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .cards, .blocks, .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card, .block {
+      background-color: var(--gris);
+      color: var(--plateado);
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover, .block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .card h3, .block h3 {
+      color: var(--amarillo);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p, .block p {
+      font-size: 1rem;
+    }
+
+    /* Contacto */
+    .contacto {
+      background-color: var(--plateado);
+      text-align: center;
+    }
+
+    .contacto a {
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .contacto a:hover {
+      background-color: #1ebc5c;
+    }
+
+    /* Redes */
+    .redes {
+      background-color: var(--gris);
+      text-align: center;
+      color: var(--plateado);
+    }
+
+    .social-icons a svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--amarillo);
+      transition: fill 0.3s ease;
+    }
+
+    .social-icons a:hover svg {
+      fill: var(--dorado);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar fade-in">
+    <div class="logo">Márquezlab-webpage</div>
+    <ul class="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="https://miniweb-six.vercel.app" target="_blank">Generador de Plantillas</a></li>
+    </ul>
+  </header>
+
+  <section class="hero fade-in" id="inicio">
+    <h1>Tu Visión Digital, Nuestra Creación</h1>
+    <p>Expertos en Desarrollo Web & Software</p>
+    <a href="#servicios" class="hero-btn">Explora nuestros servicios</a>
+  </section>
+
+  <section id="servicios" class="fade-in">
+    <h2>Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Desarrollo Web & Apps</h3>
+        <p>Creación de sitios web modernos, responsivos y funcionales para tu marca.</p>
+      </div>
+      <div class="card">
+        <h3>Consultoría & Software</h3>
+        <p>Soluciones personalizadas y asesoramiento técnico para tu negocio digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="fade-in">
+    <h2>Sobre Nosotros</h2>
+    <div class="blocks">
+      <div class="block">
+        <p>En <strong>MárquezLab-Webpage</strong> transformamos ideas institucionales en soluciones digitales escalables. Desarrollamos sitios web, campañas de marketing y software a medida con enfoque profesional, blindaje técnico y documentación editable.</p>
+      </div>
+      <div class="block">
+        <p>Acompañamos a marcas e instituciones que buscan diferenciarse, automatizar su atención digital y profesionalizar su presencia online. Cada proyecto está pensado para delegar, escalar y proteger.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que-elegirnos" class="fade-in">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="blocks">
+      <div class="block">
+        <h3>🔒 Blindaje institucional</h3>
+        <p>Protegemos tu reputación digital con flujos validados legal y técnicamente.</p>
+      </div>
+      <div class="block">
+        <h3>⚙️ Automatización escalable</h3>
+        <p>Soluciones replicables que optimizan atención digital e integran pagos y validaciones.</p>
+      </div>
+      <div class="block">
+        <h3>📄 Documentación editable</h3>
+        <p>Módulos con documentación institucional editable para escalar sin depender de terceros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto fade-in" id="contacto">
+    <h2>Solicitar propuesta</h2>
+    <p>Desarrollamos sitios institucionales y branding profesional para marcas que buscan diferenciarse y escalar.</p>
+    <a href="https://wa.me/5493754530645" target="_blank">Contactar por WhatsApp</a>
+  </section>
+<section class="redes fade-in" id="redes-sociales">
+  <h2>Conectá con MárquezLab</h2>
+  <p>Seguinos para conocer proyectos, novedades y soluciones digitales escalables.</p>
+  <div class="social-icons">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/marquezlab" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm4.25 5a5 5 0 110 10 5 5 0 010-10zm5.25-.75a.75.75 0 110 1.5.75.75 0 010-1.5z"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/marquezlab" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5a2.5 2.5 0 11-.01 5.01 2.5 2.5 0 01.01-5.01zM3 9h4v12H3V9zm7 0h3.6v1.71h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-4v-5.25c0-1.25-.03-2.85-1.75-2.85-1.75 0-2.02 1.37-2.02 2.75V21h-4V9z"/>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5493754530645" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.78 11.78 0 0012 0C5.37 0 .01 5.37.01 12c0 2.11.55 4.17 1.6 5.99L0 24l6.26-1.64a11.94 11.94 0 005.74 1.46c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+  <script src="//code.tidio.co/jgalu6ffdak9czrngrroaydxjyfin19p.js" async></script>
+
+</body>
+</html>
